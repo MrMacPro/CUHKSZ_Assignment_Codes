@@ -200,7 +200,7 @@ def init_screen()->turtle.Screen:
     return s
 
 def init_puzzle()->tuple:
-    board_size = int(validate_input("Please enter the board size (in 3,4,5)", range(3,6)))
+    board_size = int(validate_input("Please enter the board size (in 3,4,5)", range(3,100)))
     numbers = list(range(1, board_size**2 + 1))
     solved_puzzle = [[0 if i == board_size-1 and j == board_size-1 else numbers.pop(0) for i in range(board_size)] for j in range(board_size)]
     puzzle, current_0_pos = disrupt(board_size) #Disrupt puzzle
@@ -273,14 +273,14 @@ if __name__ == "__main__":
     write_num(nums, first_write=True)
     
     #Solve
-    memory = [puzzle]
-    def solve(puzzle:list)->None:
-        try:
-            x, y = index_to_pos(current_0_pos[0]-1,current_0_pos[1])
-            onclick_hdlr(x,y)
-        except:
+    # memory = [puzzle]
+    # def solve(puzzle:list)->None:
+    #     try:
+    #         x, y = index_to_pos(current_0_pos[0]-1,current_0_pos[1])
+    #         onclick_hdlr(x,y)
+    #     except:
             
-    solve(puzzle)
+    #solve(puzzle)
 
     #Program will then be handled by onclick handler in turtle
     s.mainloop()
