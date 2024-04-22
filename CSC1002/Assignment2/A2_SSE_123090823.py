@@ -271,16 +271,5 @@ if __name__ == "__main__":
     
     #Init numbers
     write_num(nums, first_write=True)
-    
-    #Solve
-    # memory = [puzzle]
-    # def solve(puzzle:list)->None:
-    #     try:
-    #         x, y = index_to_pos(current_0_pos[0]-1,current_0_pos[1])
-    #         onclick_hdlr(x,y)
-    #     except:
-            
-    #solve(puzzle)
 
-    #Program will then be handled by onclick handler in turtle
     s.mainloop()
